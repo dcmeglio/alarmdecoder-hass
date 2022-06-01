@@ -84,8 +84,8 @@ class AlarmDecoderBinarySensor(BinarySensorEntity):
         self._relay_addr = relay_addr
         self._relay_chan = relay_chan
         self._attr_device_class = zone_type
-		if zone_rfid is not None:
-		    self._attr_unique_id = "alarmdecoder_" + zone_rfid
+        if zone_rfid is not None:
+            self._attr_unique_id = zone_rfid
         self._attr_extra_state_attributes = {
             CONF_ZONE_NUMBER: self._zone_number,
         }
